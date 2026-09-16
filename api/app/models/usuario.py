@@ -18,6 +18,6 @@ class Usuario(Base):
     senha_hash: Mapped[str] = mapped_column(String(255), nullable=False)
     papel: Mapped[Papel] = mapped_column(
         Enum(Papel, native_enum=False, length=20), nullable=False,
-)
-ativo: Mapped[bool] = mapped_column(Boolean, default=True, nullable=False)
-criado_em: Mapped[datetime] = mapped_column(DateTime, default=agora, nullable=False)
+    )
+    ativo: Mapped[bool] = mapped_column(Boolean, default=True, nullable=False)
+    criado_em: Mapped[datetime] = mapped_column(DateTime, default=agora, nullable=False)
