@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from sqlalchemy import Boolean, DateTime, Enum, String  
+from sqlalchemy import Boolean, DateTime, Enum, String
 from sqlalchemy.orm import Mapped, mapped_column
 
 from app.core.database import Base
@@ -8,7 +8,7 @@ from app.core.enums import Papel
 from app.core.tempo import agora
 
 
-#ORM: Object Relational Mapping: mapeamento das tabelas no banco de dados em objetos e vice-versa.
+# ORM: Object Relational Mapping: mapeamento das tabelas do banco em objetos e vice-versa
 class Usuario(Base):
     __tablename__ = "usuarios"
 

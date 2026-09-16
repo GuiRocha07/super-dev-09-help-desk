@@ -1,5 +1,5 @@
 """
-Pacote de models. Importar `app.models` para registrar as tabelas em Base.metadata
+Pacote de models. Importar `app.models` registra as tabelas em Base.metadata
 o que o Alembic precisa para gerar as migrations.
 """
 from app.core.database import Base

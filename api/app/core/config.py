@@ -21,5 +21,4 @@ def get_settings() -> Settings:
 
 settings = Settings()
 
-
 # py -c "from app.core.config import settings; print(settings.database_url)"

@@ -20,7 +20,3 @@ class PrioridadeChamado(str, Enum):
     BAIXA = "BAIXA"
     MEDIA = "MEDIA"
     ALTA = "ALTA"
-
-# api/app/core => enums.py
-
-

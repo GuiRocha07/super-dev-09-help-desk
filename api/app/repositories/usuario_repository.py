@@ -18,4 +18,3 @@ class UsuarioRepository(RepositorioBase[Usuario]):
         statement = statement.where(Usuario.ativo == True)
 
         return list(self.db.scalars(statement).all())
-        
