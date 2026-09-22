@@ -5,6 +5,7 @@ from app.dependencies.database import DbSession
 from app.schemas.ticket_schema import TicketAssociar, TicketCancelar, TicketCriar, TicketDefinirPrioridade, TicketResolver, TicketResposta
 from app.services.ticket_service import TicketService
 
+
 router = APIRouter(prefix="/tickets", tags=["Tickets"])
 
 @router.post("", response_model=TicketResposta, status_code=status.HTTP_201_CREATED)
@@ -31,11 +32,9 @@ def obter_por_id(id: int, db: DbSession):
 def obter_todos(db: DbSession):
     return TicketService(db).listar()
 
-
 @router.post("/{id}/resolver", response_model=TicketResposta)
 def resolver(id: int, dado: TicketResolver, db: DbSession):
     return TicketService(db).resolver(id, dado)
-
 
 @router.post("/{id}/cancelar", response_model=TicketResposta)
 def cancelar(id: int, dado: TicketCancelar, db: DbSession):
