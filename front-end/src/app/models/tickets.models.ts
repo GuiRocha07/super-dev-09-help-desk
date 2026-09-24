@@ -13,3 +13,17 @@ export interface TicketResposta{
     solicitanteId: number;
     atendenteId: number | null;
 }
+
+export interface TicketAssociar {
+  idUsuario: number;
+}
+
+export interface TicketResolver {
+  idUsuario: number;
+  descricao: string;
+}
+
+export interface TicketCancelar {
+  idUsuario: number;
+  motivo: string;
+}
