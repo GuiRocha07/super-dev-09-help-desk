@@ -1,17 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { DefinirPrioridade } from './definir-prioridade';
 
-import { Listar } from './listar';
-
-describe('Listar', () => {
-  let component: Listar;
-  let fixture: ComponentFixture<Listar>;
+describe('DefinirPrioridade', () => {
+  let component: DefinirPrioridade;
+  let fixture: ComponentFixture<DefinirPrioridade>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Listar],
+      imports: [DefinirPrioridade],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(Listar);
+    fixture = TestBed.createComponent(DefinirPrioridade);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

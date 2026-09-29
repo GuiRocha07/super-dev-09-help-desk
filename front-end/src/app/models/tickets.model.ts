@@ -1,10 +1,10 @@
-export interface TicketResposta{
+export interface TicketResposta {
     id: number;
     numeroProtocolo: string;
     titulo: string;
     descricao: string;
     status: string;
-    prioridade: string;
+    prioridade: string | null;
     setor: string;
     descricaoSolucao: string | null;
     motivoCancelamento: string | null;
@@ -21,11 +21,21 @@ export interface TicketCadastro {
     titulo: string;
 }
 
-export interface TicketAssociar{
-  idUsuario: number | null;
+export interface TicketAssociar {
+    idUsuario: number | null;
 }
 
 export interface TicketDefinirPrioridade {
     idUsuario: number | null;
     prioridade: string | null;
+}
+
+export interface TicketResolver {
+    idUsuario: number | null;
+    descricao: string;
+}
+
+export interface TicketCancelar {
+    idUsuario: number | null;
+    motivo: string;
 }
